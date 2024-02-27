@@ -23,5 +23,7 @@ Ext.define('MyApp.Application', {
                 }
             }
         );
+    },function (){
+         console.log("I am in Application");
     }
 });
