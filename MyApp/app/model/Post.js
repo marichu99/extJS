@@ -5,8 +5,8 @@ Ext.define('MyApp.model.Post',{
       'id','userId','title','body'
   ],
   proxy: {
-      type: 'rest', // type of call
-      url: 'https://jsonplaceholder.typicode.com/posts',
+      type: 'rest', 
+      url: 'http://localhost:3000/posts',
       reader: {
           type: 'json',
       }
