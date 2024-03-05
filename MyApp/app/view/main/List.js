@@ -8,9 +8,6 @@ Ext.define('MyApp.view.main.List', {
     requires: [
         'MyApp.store.Personnel'
     ],
-
-    title: 'Personnel',
-
     store: {
         type: 'personnel'
     },
