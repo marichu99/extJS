@@ -5,7 +5,7 @@ Ext.define('MyApp.model.Comment', {
         {
             name: 'postId', reference: 'Post', type: 'int'
         },
-        'id', 'name', 'body'
+        '_id', 'name', 'body'
     ],
     proxy: {
         type: 'rest',
