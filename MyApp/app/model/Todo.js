@@ -4,6 +4,7 @@ Ext.define('MyApp.model.Todo',{
     fields:[
         '_id',
         'title',
-        'completed'
+        'completed',
+        "userId"
     ]
 })

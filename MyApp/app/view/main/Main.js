@@ -5,106 +5,118 @@
  *
  * TODO - Replace this content of this view to suite the needs of your application.
  */
-Ext.define('MyApp.view.main.Main', {
-  extend: 'Ext.tab.Panel',
-  xtype: 'app-main',
+Ext.define("MyApp.view.main.Main", {
+  extend: "Ext.tab.Panel",
+  xtype: "app-main",
 
   requires: [
-      'Ext.plugin.Viewport',
-      'Ext.window.MessageBox',
+    "Ext.plugin.Viewport",
+    "Ext.window.MessageBox",
 
-      'MyApp.view.main.MainController',
-      'MyApp.view.main.MainModel',
-      'MyApp.view.main.List'
+    "MyApp.view.main.MainController",
+    "MyApp.view.main.MainModel",
+    "MyApp.view.main.List",
   ],
 
-  controller: 'main',
-  viewModel: 'main',
+  controller: "main",
+  viewModel: "main",
 
-  ui: 'navigation',
+  ui: "navigation",
 
   tabBarHeaderPosition: 1,
   titleRotation: 0,
   tabRotation: 0,
 
   header: {
-      layout: {
-          align: 'stretchmax'
+    layout: {
+      align: "stretchmax",
+    },
+    title: {
+      bind: {
+        text: "{name}",
       },
-      title: {
-          bind: {
-              text: '{name}'
-          },
-          flex: 0
-      },
-      iconCls: 'fa-th-list'
+      flex: 0,
+    },
+    iconCls: "fa-th-list",
   },
 
   tabBar: {
-      flex: 1,
-      layout: {
-          align: 'stretch',
-          overflowHandler: 'none'
-      }
+    flex: 1,
+    layout: {
+      align: "stretch",
+      overflowHandler: "none",
+    },
   },
 
   responsiveConfig: {
-      tall: {
-          headerPosition: 'top'
-      },
-      wide: {
-          headerPosition: 'left'
-      }
+    tall: {
+      headerPosition: "top",
+    },
+    wide: {
+      headerPosition: "left",
+    },
   },
 
   defaults: {
-      bodyPadding: 20,
-      tabConfig: {
-          responsiveConfig: {
-              wide: {
-                  iconAlign: 'left',
-                  textAlign: 'left'
-              },
-              tall: {
-                  iconAlign: 'top',
-                  textAlign: 'center',
-                  width: 120
-              }
-          }
-      }
+    bodyPadding: 20,
+    tabConfig: {
+      responsiveConfig: {
+        wide: {
+          iconAlign: "left",
+          textAlign: "left",
+        },
+        tall: {
+          iconAlign: "top",
+          textAlign: "center",
+          width: 120,
+        },
+      },
+    },
   },
 
-  items: [{
-      title: 'Posts',
-      iconCls: 'fa-user',
+  items: [
+    {
+      title: "Posts",
+      iconCls: "fa-user",
       items: [
-          /*{
+        /*{
               xtype: 'postgrid'
           }*/
-      ]
-  },
-  {
-      title: 'Home',
-      iconCls: 'fa-home',
-      // The following grid shares a store with the classic version's grid as well!
-      items: [{
-          xtype: 'mainlist'
-      }]
-  },
-  {
-      title: 'Static Data Management',
-      iconCls: 'fa-users',
+      ],
+    },
+    {
+      title: "Checkout",
+      iconCls: "fa-user",
       items: [
-          {
-              xtype: 'parentpanel'
-          }
-      ]
-  },
-  {
-      title: 'Settings',
-      iconCls: 'fa-cog',
-      items: [
+        {
+            xtype: 'form-checkout'
+        }
+      ],
+    },
 
-      ]
-  }]
+    {
+      title: "Home",
+      iconCls: "fa-home",
+      // The following grid shares a store with the classic version's grid as well!
+      items: [
+        {
+          xtype: "mainlist",
+        },
+      ],
+    },
+    {
+      title: "Static Data Management",
+      iconCls: "fa-users",
+      items: [
+        {
+          xtype: "parentpanel",
+        },
+      ],
+    },
+    {
+      title: "Settings",
+      iconCls: "fa-cog",
+      items: [],
+    },
+  ],
 });
