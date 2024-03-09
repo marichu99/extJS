@@ -33,5 +33,13 @@ Ext.define('MyApp.view.users.UserGridController', {
             lowerPanel.setHeight(0)
             btn.setText("Show Details")
         }
-    }
+    },
+    onModelBinding:function(btn,e,eOpts){
+        Ext.create({
+            xtype:'modelbindingform'
+        })
+    },
+    onUserGridCellDblClick:function (grid, td, cellIndex, record, tr, rowIndex, e, eOpts){
+        console.log(record.get('username'));
+    },
 })
