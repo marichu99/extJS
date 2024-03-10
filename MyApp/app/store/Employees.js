@@ -10,5 +10,8 @@ Ext.define("MyApp.store.Employees", {
     { name: "Jim Halpert", seniority: 3, department: "Sales" },
     { name: "Kevin Malone", seniority: 4, department: "Accounting" },
     { name: "Angela Martin", seniority: 5, department: "Accounting" },
+    { name: "Pamela Beesly", seniority: 2, department: "Sales" },
+    { name: "Oscar Sanchez", seniority: 5, department: "Accounting" },
+    { name: "Robert carlifornia", seniority: 7, department: "Management" },
   ],
 });
