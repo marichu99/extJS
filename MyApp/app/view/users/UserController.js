@@ -42,4 +42,23 @@ Ext.define('MyApp.view.users.UserGridController', {
     onUserGridCellDblClick:function (grid, td, cellIndex, record, tr, rowIndex, e, eOpts){
         console.log(record.get('username'));
     },
+    onUserGridCellContextMenu: function(grid, td, cellIndex, record, tr, rowIndex, e, eOpts){
+        e.stopEvent();
+        let contextMenu = Ext.create('Ext.menu.Menu', {
+            width: 100,
+            plain: true,
+            floating: true,
+            renderTo: Ext.getBody(),
+            items: [{
+                text: 'plain item 1'
+            }, {
+                text: 'plain item 2'
+            }, {
+                text: 'plain item 3'
+            }]
+        });
+    
+        contextMenu.showAt(e.getXY());
+    }
+    
 })
