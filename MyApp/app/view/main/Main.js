@@ -89,8 +89,17 @@ Ext.define("MyApp.view.main.Main", {
       iconCls: "fa-user",
       items: [
         {
-            xtype: 'form-checkout'
-        }
+          xtype: "form-checkout",
+        },
+      ],
+    },
+    {
+      title: "Groupings",
+      iconCls: "fa-plane",
+      items: [
+        {
+          xtype: "employeewindow",
+        },
       ],
     },
 
