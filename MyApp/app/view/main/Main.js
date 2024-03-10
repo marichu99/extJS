@@ -94,6 +94,15 @@ Ext.define("MyApp.view.main.Main", {
       ],
     },
     {
+      title: "Test Summary",
+      iconCls: "fa-user",
+      items: [
+        {
+          xtype: "testresultpanel",
+        },
+      ],
+    },
+    {
       title: "Groupings",
       iconCls: "fa-plane",
       items: [
