@@ -6,6 +6,11 @@ Ext.define('MyApp.view.users.UserGridController', {
             store = grid.getStore();
         store.load();
     },
+    onClickAddUserButton: function(btn,e ,eOpts){
+        Ext.create({
+            xtype: "userformwindow"
+        })
+    },
     onUserGridCellClick: function (grid, td, cellIndex, record, tr, rowIndex, e, eOpts) {
         let postsStore = Ext.ComponentQuery.query('postgrid')[0].getStore();
         let todosStore = Ext.ComponentQuery.query('todogrid')[0].getStore();
@@ -19,7 +24,7 @@ Ext.define('MyApp.view.users.UserGridController', {
                 userId: record.get('_id')
             }
         })
-        console.log(record)
+        console.log(record.get('_id'))
     },
     onShowDetails:function(btn,e,eOpts){
         let userGrid = this.getView();

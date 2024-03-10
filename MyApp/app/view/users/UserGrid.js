@@ -8,7 +8,7 @@ Ext.define("MyApp.view.users.UserGrid", {
   },
   height: 1200,
   plugins: {
-    cellediting: {
+    rowediting: {
       clicksToEdit: 1,
     },
   },
@@ -24,6 +24,7 @@ Ext.define("MyApp.view.users.UserGrid", {
       dataIndex: "username",
       text: "Username",
       flex: 2,
+      editor: "textfield"
     },
     {
       dataIndex: "email",
@@ -34,7 +35,7 @@ Ext.define("MyApp.view.users.UserGrid", {
       },
       editor: {
         xtype: "textfield",
-        completeOnEnter: false,
+        completeOnEnter: true,
         allowBlank: false,
       },
     },
@@ -47,6 +48,7 @@ Ext.define("MyApp.view.users.UserGrid", {
   tbar: [
     {
       text: "Add User",
+      handler: "onClickAddUserButton",
     },
     // '->',
     {
