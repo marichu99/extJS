@@ -1,3 +1,4 @@
+
 Ext.define('MyApp.view.main.MainPanel', {
     extend:'Ext.tab.Panel',
     xtype:'mainpanel',

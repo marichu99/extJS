@@ -16,7 +16,7 @@ Ext.define('MyApp.view.main.MainController', {
             //
         }
     },
-    onLogout: function() {
+    onLogout: function () {
 
         // Remove the localStorage key/value
         localStorage.removeItem('MsAppLoggedIn');

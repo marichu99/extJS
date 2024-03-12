@@ -5,42 +5,40 @@
  *
  * TODO - Replace this content of this view to suite the needs of your application.
  */
-Ext.define("MyApp.view.main.Main", {
-  extend: "Ext.container.Container",
-  xtype: "app-main",
+Ext.define('MyApp.view.main.Main', {
+  extend: 'Ext.container.Container',
+  xtype: 'app-main',
   requires: [
-    "Ext.window.MessageBox",
-    "MyApp.view.main.MainController",
-    "MyApp.view.main.MainModel",
+      'Ext.window.MessageBox',
+      'MyApp.view.main.MainController',
+      'MyApp.view.main.MainModel',
   ],
-  plugins: "viewport",
-  controller: "main",
-  viewModel: "main",
+  plugins: 'viewport',
+  controller: 'main',
+  viewModel: 'main',
 
   layout: {
-    type: "border",
+      type: 'border'
   },
-  items: [
-    {
-      xtype: "mainmenu",
+  items: [{
+      xtype: 'mainmenu',
       bind: {
-        title: "{name}",
+          title: '{name}'
       },
-      region: "west",
+      region: 'west',
       width: 250,
       split: true,
-    },
-    {
-      region: "center",
-      xtype: "mainpanel",
-    },
-    {
-      region: "south",
-      xtype: "appfooter",
-    },
-    {
-      region: "north",
-      xtype: "appheader",
-    },
-  ],
+  },
+  {
+      region: 'center',
+      xtype: 'mainpanel',
+  },
+  {
+      region: 'south',
+      xtype: 'appfooter',
+  } ,
+   {
+      region: 'north',
+       xtype: 'appheader',
+  }]
 });
