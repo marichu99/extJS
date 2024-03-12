@@ -6,7 +6,7 @@ Ext.define("MyApp.view.users.UserGrid", {
   store: {
     type: "users",
   },
-  height: 1200,
+  height: 800,
   plugins: {
     rowediting: {
       clicksToEdit: 1,
