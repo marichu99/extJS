@@ -15,7 +15,9 @@ Ext.define('MyApp.view.login.LoginController', {
 
         // Add the main view to the viewport
 
-        Ext.widget("app-main");
+        Ext.create({
+            xtype: "app-main"
+        });
       
 
     }
