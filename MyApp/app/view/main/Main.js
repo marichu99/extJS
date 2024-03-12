@@ -6,135 +6,41 @@
  * TODO - Replace this content of this view to suite the needs of your application.
  */
 Ext.define("MyApp.view.main.Main", {
-  extend: "Ext.tab.Panel",
+  extend: "Ext.container.Container",
   xtype: "app-main",
-
   requires: [
-    "Ext.plugin.Viewport",
     "Ext.window.MessageBox",
-
     "MyApp.view.main.MainController",
     "MyApp.view.main.MainModel",
-    "MyApp.view.main.List",
   ],
-
+  plugins: "viewport",
   controller: "main",
   viewModel: "main",
 
-  ui: "navigation",
-
-  tabBarHeaderPosition: 1,
-  titleRotation: 0,
-  tabRotation: 0,
-
-  header: {
-    layout: {
-      align: "stretchmax",
-    },
-    title: {
-      bind: {
-        text: "{name}",
-      },
-      flex: 0,
-    },
-    iconCls: "fa-th-list",
+  layout: {
+    type: "border",
   },
-
-  tabBar: {
-    flex: 1,
-    layout: {
-      align: "stretch",
-      overflowHandler: "none",
-    },
-  },
-
-  responsiveConfig: {
-    tall: {
-      headerPosition: "top",
-    },
-    wide: {
-      headerPosition: "left",
-    },
-  },
-
-  defaults: {
-    bodyPadding: 20,
-    tabConfig: {
-      responsiveConfig: {
-        wide: {
-          iconAlign: "left",
-          textAlign: "left",
-        },
-        tall: {
-          iconAlign: "top",
-          textAlign: "center",
-          width: 120,
-        },
-      },
-    },
-  },
-
   items: [
     {
-      title: "Posts",
-      iconCls: "fa-user",
-      items: [
-        /*{
-              xtype: 'postgrid'
-          }*/
-      ],
+      xtype: "mainmenu",
+      bind: {
+        title: "{name}",
+      },
+      region: "west",
+      width: 250,
+      split: true,
     },
     {
-      title: "Checkout",
-      iconCls: "fa-user",
-      items: [
-        {
-          xtype: "form-checkout",
-        },
-      ],
+      region: "center",
+      xtype: "mainpanel",
     },
     {
-      title: "Test Summary",
-      iconCls: "fa-user",
-      items: [
-        {
-          xtype: "testresultpanel",
-        },
-      ],
+      region: "south",
+      xtype: "appfooter",
     },
     {
-      title: "Groupings",
-      iconCls: "fa-plane",
-      items: [
-        {
-          xtype: "employeewindow",
-        },
-      ],
-    },
-
-    {
-      title: "Home",
-      iconCls: "fa-home",
-      // The following grid shares a store with the classic version's grid as well!
-      items: [
-        {
-          xtype: "mainlist",
-        },
-      ],
-    },
-    {
-      title: "Static Data Management",
-      iconCls: "fa-users",
-      items: [
-        {
-          xtype: "parentpanel",
-        },
-      ],
-    },
-    {
-      title: "Settings",
-      iconCls: "fa-cog",
-      items: [],
+      region: "north",
+      xtype: "appheader",
     },
   ],
 });
