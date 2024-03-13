@@ -16,10 +16,30 @@ Ext.define("MyApp.store.Menu", {
             leaf: true,
           },
           {
+<<<<<<< HEAD
             text: "Todos",
             iconCls: "fas fa-user-secret",
             className: "todogrid",
             leaf: true,
+=======
+              text: 'Static Data',
+              iconCls:'fa fa-database fa-lg',
+              children: [
+                  {
+                      text: 'Posts',
+                      iconCls: 'fa fa-users',
+                      className: 'postgrid',
+                      leaf: true
+                  },
+                  {
+                      text: 'Personnel',
+                      iconCls: 'fa fa-users',                      
+                      className: 'mainlist',
+                      leaf:true,
+                  }
+              ]
+
+>>>>>>> 025af80... changes to the grids
           },
         ],
       },
