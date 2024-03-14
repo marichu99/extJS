@@ -9,12 +9,7 @@ Ext.define("MyApp.store.Menu", {
         text: "Security",
         iconCls: "fas fa-users-cog",
         children: [
-          {
-            text: "Users",
-            iconCls: "fa fa-users",
-            className: "users",
-            leaf: true,
-          },
+          
           {
             text: "Static Data",
             iconCls: "fa fa-database fa-lg",

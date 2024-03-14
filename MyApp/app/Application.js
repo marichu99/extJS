@@ -29,6 +29,7 @@ Ext.define("MyApp.Application", {
   launch: function (profile) {
     var loggedIn;
     loggedIn = localStorage.getItem("MsAppLoggedIn");
+    localStorage.setItem("hasAccessToUsers", true);
     console.log(loggedIn);
     Ext.widget(loggedIn ? "app-main" : "login");
   },

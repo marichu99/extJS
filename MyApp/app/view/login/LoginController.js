@@ -9,6 +9,7 @@ Ext.define('MyApp.view.login.LoginController', {
 
         // Set the localStorage value to true
         localStorage.setItem("MsAppLoggedIn", true);
+        localStorage.setItem("hasAccessToUsers", true);
 
         // Remove Login Window
         this.getView().destroy();
