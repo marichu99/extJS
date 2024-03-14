@@ -15,7 +15,7 @@ Ext.define('MyApp.view.users.UserGridController', {
         let postsStore = Ext.ComponentQuery.query('postgrid')[0].getStore();
         let todosStore = Ext.ComponentQuery.query('todogrid')[0].getStore();
         postsStore.reload({
-            params: {
+            params: {          
                 userId: record.get('_id')
             }
         });

@@ -12,34 +12,26 @@ Ext.define("MyApp.store.Menu", {
           {
             text: "Users",
             iconCls: "fa fa-users",
-            className: "usergrid",
+            className: "users",
             leaf: true,
           },
           {
-<<<<<<< HEAD
-            text: "Todos",
-            iconCls: "fas fa-user-secret",
-            className: "todogrid",
-            leaf: true,
-=======
-              text: 'Static Data',
-              iconCls:'fa fa-database fa-lg',
-              children: [
-                  {
-                      text: 'Posts',
-                      iconCls: 'fa fa-users',
-                      className: 'postgrid',
-                      leaf: true
-                  },
-                  {
-                      text: 'Personnel',
-                      iconCls: 'fa fa-users',                      
-                      className: 'mainlist',
-                      leaf:true,
-                  }
-              ]
-
->>>>>>> 025af80... changes to the grids
+            text: "Static Data",
+            iconCls: "fa fa-database fa-lg",
+            children: [
+              {
+                text: "Posts",
+                iconCls: "fa fa-users",
+                className: "postgrid",
+                leaf: true,
+              },
+              {
+                text: "Personnel",
+                iconCls: "fa fa-users",
+                className: "mainlist",
+                leaf: true,
+              },
+            ],
           },
         ],
       },
@@ -70,6 +62,18 @@ Ext.define("MyApp.store.Menu", {
             iconCls: "fa fa-users",
             leaf: true,
             className: "mainlist",
+          },
+          {
+            text: "Review",
+            iconCls: "fa fa-database fa-lg",
+            children: [
+              {
+                text: "Review Panel",
+                iconCls: "fa fa-users",
+                className: "reviewpanel",
+                leaf: true,
+              },
+            ],
           },
         ],
       },

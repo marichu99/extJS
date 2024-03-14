@@ -2,7 +2,6 @@ Ext.define("MyApp.view.users.UserGrid", {
   extend: "Ext.grid.GridPanel",
   xtype: "usergrid",
   controller: "usergridcontroller",
-  title: "Users",
   store: {
     type: "users",
   },
