@@ -8,10 +8,40 @@ Ext.define("MyApp.view.main.MainController", {
   alias: "controller.main",
   routes: {
     home: "onHomeRoute",
-    "users|reviewpanel|mainlist|postgrid|todogrid": {
+    "users|reviewpanel|mainlist|postgrid|todogrid|userpanel|parentpanel": {
       action: "onRoute",
       before: "onBeforeRoute",
     },
+    "users/:id": {
+      action: "onUserSelect",
+      before: "onBeforeUserSelect",
+      conditions: {
+        ":id": "([0-9]+)",
+      },
+    },
+  },
+  onUserSelect: function (id) {
+    //fire an event to select the record on the user grid
+    this.getUserGrid().fireEvent("selectuser", id);
+  },
+  onBeforeUserSelect: function (id, action) {
+    var me = this,
+      hash = "users",
+      mainMenu = me.getMainMenu();
+    me.locateMenuItem(mainMenu, hash);
+
+    //get reference to grid
+    let grid = this.getUserGrid();
+
+    //get store
+    let store = grid.getStore();
+    //find record with the id
+    let record = store.findRecord("_id", id);
+    if (record) {
+      action.resume();
+    } else {
+      action.stop();
+    }
   },
 
   onHomeRoute: function () {

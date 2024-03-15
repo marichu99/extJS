@@ -77,5 +77,6 @@ Ext.define("MyApp.view.users.UserGrid", {
     cellclick: "onUserGridCellClick",
     celldblclick: "onUserGridCellDblClick",
     cellcontextmenu: "onUserGridCellContextMenu",
+    selectuser:'onSelectUser'
   },
 });

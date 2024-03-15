@@ -9,7 +9,6 @@ Ext.define("MyApp.store.Menu", {
         text: "Security",
         iconCls: "fas fa-users-cog",
         children: [
-          
           {
             text: "Static Data",
             iconCls: "fa fa-database fa-lg",
@@ -41,16 +40,10 @@ Ext.define("MyApp.store.Menu", {
             leaf: true,
           },
           {
-            text: "Posts",
-            iconCls: "fa fa-users",
-            className: "postgrid",
-            leaf: true,
-          },
-          {
-            text: "Todos",
+            text: "UserDetails",
             iconCls: "fa fa-users",
             leaf: true,
-            className: "todogrid",
+            className: "userpanel",
           },
           {
             text: "Personnel",
