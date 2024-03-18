@@ -6,7 +6,7 @@ Ext.define('MyApp.view.transaaction.TransactionView', {
     columns: [
         {text: 'Type', dataIndex: 'type', width: 100},
         {text: 'Subtype', dataIndex: 'subtype', width: 100},
-        {text: 'Amount', dataIndex: 'amount', width: 100, align: 'right', renderer: 'usMoney'},
+        {text: 'Amount', dataIndex: 'amount', width: 100, align: 'right'},
         {text: 'Currency', dataIndex: 'currency', width: 100}
     ],
     

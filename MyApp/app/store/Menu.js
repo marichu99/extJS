@@ -62,7 +62,7 @@ Ext.define("MyApp.store.Menu", {
                 leaf: true,
               },
               {
-                text: "Users",
+                text: "Transactions",
                 iconCls: "fa fa-users",
                 className: "transactionview",
                 leaf: true,
