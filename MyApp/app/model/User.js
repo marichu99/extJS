@@ -26,4 +26,5 @@ Ext.define("MyApp.model.User", {
       encode: true,
     },
   },
+  hasMany: "Myapp.model.Order"
 });
