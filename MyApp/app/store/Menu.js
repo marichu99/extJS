@@ -61,6 +61,12 @@ Ext.define("MyApp.store.Menu", {
                 className: "reviewpanel",
                 leaf: true,
               },
+              {
+                text: "Users",
+                iconCls: "fa fa-users",
+                className: "transactionview",
+                leaf: true,
+              },
             ],
           },
         ],

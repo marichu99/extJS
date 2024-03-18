@@ -8,7 +8,7 @@ Ext.define("MyApp.view.main.MainController", {
   alias: "controller.main",
   routes: {
     home: "onHomeRoute",
-    "users|reviewpanel|mainlist|postgrid|todogrid|userpanel|parentpanel": {
+    "users|reviewpanel|mainlist|postgrid|todogrid|userpanel|parentpanel|transactionview": {
       action: "onRoute",
       before: "onBeforeRoute",
     },
